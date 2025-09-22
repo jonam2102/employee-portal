@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+jinja2
+redis
+python-multipart
+pytest
+httpx
+pytest-html
+passlib
