@@ -1,0 +1,63 @@
+version: '3.9'
+
+services:
+  redis-init:
+    build:
+      context: ./redis_image
+    image: manoj/redis-init:latest
+    container_name: redis-init
+    command: redis-init --requirepass Admin123 --protected-mode no
+    ports:
+      - "6379:6379"
+    networks:
+      - mynet
+
+  redis-exporter:
+    image: oliver006/redis_exporter:latest
+    container_name: redis-exporter
+    ports:
+      - "9121:9121"
+    networks:
+      - mynet
+    command:
+      - '--redis.addr=redis://redis-init:6379'
+      - '--redis.password=Admin123'
+
+  fastapi-app:
+    build:
+      context: .
+    image: manoj/employee-dashboard:latest
+    container_name: fastapi-app
+    ports:
+      - "8000:8000"
+    networks:
+      - mynet
+    environment:
+      REDIS_URL: "redis://:Admin123@redis-init:6379/0"
+
+  prometheus:
+    build:
+      context: ./prometheus
+    image: manoj/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - mynet
+
+  grafana:
+    build:
+      context: ./grafana
+    image: manoj/grafana-custom:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - mynet
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: grafana123
+
+networks:
+  mynet:
+    driver: bridge
