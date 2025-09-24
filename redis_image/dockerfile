@@ -1,0 +1,22 @@
+FROM python:3.10-slim
+
+# Install Redis server
+RUN apt-get update && \
+    apt-get install -y redis-server && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copy app files
+WORKDIR /app
+COPY requirements.txt .
+COPY sample_setup.py .
+COPY entry_point.sh .
+
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python", "sample_setup.py"]
+
+
+# Start Redis and run init script
+ENTRYPOINT [ "/app/entry_point.sh"]

@@ -3,7 +3,7 @@ import json
 import random
 from datetime import datetime, timedelta
 
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='localhost',password="Admin123", port=6379, db=0)
 
 
 roles = ["Engineer", "Senior Engineer", "Manager", "HR", "Intern", "Lead", "Director","Architect"]

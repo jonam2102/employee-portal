@@ -7,3 +7,4 @@ pytest
 httpx
 pytest-html
 passlib
+prometheus_fastapi_instrumentator

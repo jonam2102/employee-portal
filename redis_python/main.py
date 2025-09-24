@@ -12,6 +12,7 @@ import json
 import os 
 from collections import defaultdict
 from redis_python.logger import logger
+from prometheus_fastapi_instrumentator import Instrumentator
 
 
 app = FastAPI(title="Employee Info API")
@@ -44,7 +45,7 @@ class Employee(BaseModel):
 
         @validator("role")
         def validate_role(cls, v):
-            allowed_roles = {["Engineer", "Senior Engineer", "Manager", "HR", "Intern", "Lead", "Director", "Architect"]}
+            allowed_roles = {"Engineer", "Senior Engineer", "Manager", "HR", "Intern", "Lead", "Director", "Architect"}
             if v not in allowed_roles:
                 raise ValueError(f"Role must be one of: {', '.join(allowed_roles)}")
             return v
@@ -111,16 +112,21 @@ async def get_employee(emp_id: str):
 # ✅ Create employee (no duplicates)
 @app.post("/employee", summary="Create a new employee")
 async def create_employee(emp: Employee):
-    for key in r.keys():
-      existing = json.loads(r.get(key))
-    if r.exists(emp.id):
-        raise HTTPException(status_code=400, detail="Employee with ID {emp.id} Employee already exists")
-    elif existing["name"] == emp.name and existing["date_of_birth"] == str(emp.date_of_birth):
-        raise HTTPException(status_code=400, detail="Duplicate employee detected based on name and date of birth")
-    r.set(emp.id, emp.json())
-    logger.info(f"Employee created: {emp.id}")
-    return {"message": "Employee created successfully"}
-   
+   if r.exists(emp.id):
+        raise HTTPException(status_code=400, detail=f"Employee with ID {emp.id} already exists")
+
+   for key in r.keys():
+        try:
+            existing = json.loads(r.get(key))
+            if existing["name"] == emp.name and existing["date_of_birth"] == str(emp.date_of_birth):
+                raise HTTPException(status_code=400, detail="Duplicate employee detected based on name and date of birth")
+        except Exception as e:
+            logger.warning(f"Invalid data for key {key}: {e}")
+            continue
+
+   r.set(emp.id, emp.json())
+   logger.info(f"Employee created: {emp.id}")
+   return {"message": "Employee created successfully"}
 # ✏️ Update employee
 @app.put("/employee/{emp_id}", summary="Update an existing employee")
 async def update_employee(emp_id: str, emp: Employee):
@@ -279,3 +285,11 @@ async def hiring_ui(request: Request):
     if request.cookies.get("auth") != "true":
         return RedirectResponse(url="/login")
     return templates.TemplateResponse("hiring.html", {"request": request})
+
+@app.get("/health", summary="Health check endpoint")
+async def health_check():
+    return {"status": "ok", "timestamp": datetime.now(timezone.utc).isoformat()}
+
+
+Instrumentator().instrument(app).expose(app)
+

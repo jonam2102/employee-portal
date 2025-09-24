@@ -1,8 +1,9 @@
 import redis
 
-def is_redis_running(host='localhost', port=6379):
+def is_redis_running(host='localhost', port=6379,password='Admin123',decode_responses=True):
     try:
-        client = redis.StrictRedis(host=host, port=port, db=0)
+        client = redis.Redis(host=host, port=port,password=password,
+                              db=0)
         response = client.ping()
         return response  # True if Redis is running
     except redis.ConnectionError:
