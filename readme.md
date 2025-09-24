@@ -25,22 +25,20 @@ A secure, scalable FastAPI-based web application for managing employee data, vis
 ## 🗂️ Folder Structure
 
 employee-portal/ 
-                 ├── main.py # FastAPI app with all routes 
-                 ├── logger.py # Logging setup 
-                 ├── app.log # Log file
-                 ├── templates/ # HTML pages 
-                 │ ├── login.html 
-                 │ ├── register.html 
-                 │ ├── index.html 
-                 │ ├── dashboard.html 
-                 │ └── hiring.html 
-                 ├── static/ # Optional CSS/JS assets 
-                 └── README.md # This file
-                 └── redis_validate.py # validates the Redis connection
-                 └── requirements.txt # setup file for the app 
-                 └── sample_setup.py # sets up the employee database with random data
-
-
+                 ├── main.py # FastAPI app with all routes   
+                 ├── logger.py # Logging setup   
+                 ├── app.log # Log file  
+                 ├── templates/ # HTML pages   
+                 │ ├── login.html   
+                 │ ├── register.html   
+                 │ ├── index.html   
+                 │ ├── dashboard.html   
+                 │ └── hiring.html   
+                 ├── static/ # Optional CSS/JS assets   
+                 └── README.md # This file  
+                 └── redis_validate.py # validates the Redis connection  
+                 └── requirements.txt # setup file for the app   
+                 └── sample_setup.py # sets up the employee database with random data  
 
 ---
 
@@ -62,7 +60,9 @@ employee-portal/
 | GET    | `/dashboard-ui`       | Dashboard page (HTML)                    |
 | GET    | `/hiring-trends`      | Monthly hiring data (JSON)               |
 | GET    | `/hiring-ui`          | Hiring trends page (HTML)                |
-| GET    | `/all-employees`         | Download employee data as CSV            |
+| GET    | `/all-employees`      | Download employee data as CSV            |
+| GET    | `/health`             | Status Check of FastAPI                  |
+_____________________________________________________________________________
 
 ---
 
@@ -78,32 +78,23 @@ employee-portal/
 
 ---
 
-## 📑 Swagger & Docs
 
-FastAPI auto-generates interactive API docs:
-
-- 🔍 Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
-- 📄 ReDoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
-
-Use these to explore endpoints, test requests, and understand response formats.
-
----
 
 ## 🛠️ Setup Instructions
 
-1. **Install dependencies**  
-   ```bash
-   pip install fastapi uvicorn redis passlib[bcrypt] jinja2
+1. All the containers are self sustained and needs docker installation in order to run 
+
+For running all the containers please use the script run.sh which will cleanup and build all the images needed 
+
+2. Ensure Docker Daemon is running , in order to deploy 
+
+In case you want to Test and run locally we can use Docker alone or else you can use Docker compose commands 
+
+docker compose build 
+docker compose up -d 
  
- or 
-   pip install -r requirements.txt
 
-2. **Run Redis server Make sure Redis is running locally on port 6379.
-
-3. Run the below command : 
-
-        uvicorn main:app --reload
-4. Visit in browser
+3. Visit in browser
 
 Login: http://localhost:8000/login
 
@@ -129,6 +120,78 @@ All requests and key actions are logged to app.log:
 
 2025-09-20 00:45:12 - INFO - Login attempt for user: manoj
 2025-09-20 00:45:13 - INFO - Employee created: 101
+
+
+******************************************************************************
+
+Containers setup for Docker Compose / Terraform / Simple Docker 
+
+-- Fast API :  {Runs of Port 8000}
+
+This is the standalone image , which hosts our Employee application and also the swagger and all the routes which are established. 
+
+-- Redis-Init :  {Runs on port}
+This image will deploy a REDIS database for usage with the Fast API app , launched with swagger docs 
+
+-- Redis Exporter : 
+This is used to actively tag and collect exported logs from REDIS and redirect towards the Prometheus tool. 
+![Alt text](Images/Redis_exporter.png)
+
+-- Prometheus : 
+We have setup Prometheus as part of the infrastructure to log the fast api metrics as well as the REDIS  data to the promethueus data source 
+
+![Alt text](Images/Prometheus_Running.png)
+
+-- Grafana : 
+This image is used to actively show dashboard for viewing the dashboards for REDIS as well as the Faast api application. 
+
+![Alt text](Images/FastApi_Grafana.png)
+
+![Alt text](Images/Redis_Grafana.png)
+
+Employee Portal 
+
+![Alt text](Images/Employee_portal.png)
+
+
+## 📑 Swagger & Docs
+
+FastAPI auto-generates interactive API docs:
+
+- 🔍 Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
+
+![Alt text](Images/Swagger_docs.png)
+
+- 📄 ReDoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
+
+![Alt text](Images/Redoc_api.png)
+
+
+Use these to explore endpoints, test requests, and understand response formats.
+
+
+**************************************************************************************
+
+Performance Tests for data validation
+
+We are using Locust for Fast api based Performance Testing once the docker images have been deployed
+
+This has to be run from local by providing the URL for the run 
+
+
+pip3.13 install locust
+
+then start Locust 
+
+locust -f LocustPerformanceTest.py --host http://localhost:8000
+
+
+![Alt text](Images/Locust_perf_met.png)
+
+![Alt text](Images/Locust_performanceTest.png)
+
+
+---
 
 
 🤝 Contributing
