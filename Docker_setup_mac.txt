@@ -1,0 +1,15 @@
+Install Docker Desktop and then 
+
+Docker path setup [MACBOOK M1]
+
+echo 'export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+
+
+Locust setup and run 
+
+pip3.13 install locust
+
+locust -f locustfile.py --host http://localhost:8000
+

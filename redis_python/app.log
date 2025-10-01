@@ -1,0 +1,204 @@
+2025-09-25 18:45:14,766 - INFO - GET /health from testclient
+2025-09-25 18:45:14,770 - INFO - GET /employee/1 from testclient
+2025-09-25 18:45:14,770 - INFO - Employee fetched: 1
+2025-09-25 18:45:14,772 - INFO - GET /dashboard from testclient
+2025-09-25 18:45:14,773 - INFO - Dashboard analytics generated
+2025-09-25 18:45:14,775 - INFO - GET /all-employees from testclient
+2025-09-25 18:45:14,778 - INFO - GET /hiring-trends from testclient
+2025-09-25 18:45:14,778 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 18:46:10,159 - INFO - GET /health from testclient
+2025-09-25 18:46:10,162 - INFO - GET /employee/1 from testclient
+2025-09-25 18:46:10,163 - INFO - Employee fetched: 1
+2025-09-25 18:46:10,165 - INFO - GET /dashboard from testclient
+2025-09-25 18:46:10,166 - INFO - Dashboard analytics generated
+2025-09-25 18:46:10,168 - INFO - GET /all-employees from testclient
+2025-09-25 18:46:10,170 - INFO - GET /hiring-trends from testclient
+2025-09-25 18:46:10,171 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 18:46:10,174 - INFO - POST /register from testclient
+2025-09-25 18:46:10,408 - INFO - New user registered: testuser
+2025-09-25 18:46:10,409 - INFO - GET /login from testclient
+2025-09-25 18:46:10,430 - INFO - POST /login from testclient
+2025-09-25 18:46:10,430 - INFO - Login attempt for user: testuser
+2025-09-25 18:46:10,665 - INFO - Successful login for user: testuser
+2025-09-25 18:46:10,666 - INFO - GET / from testclient
+2025-09-25 18:46:10,667 - INFO - Portal accessed by: testuser
+2025-09-25 18:46:10,673 - INFO - POST /employee from testclient
+2025-09-25 18:46:10,678 - INFO - POST /employee from testclient
+2025-09-25 18:46:10,682 - INFO - GET /logout from testclient
+2025-09-25 18:46:10,686 - INFO - GET /metrics from testclient
+2025-09-25 18:46:10,689 - INFO - GET /employee/999 from testclient
+2025-09-25 18:46:10,689 - INFO - Employee fetched: 999
+2025-09-25 18:46:10,832 - INFO - GET /dashboard-ui from testclient
+2025-09-25 18:47:36,276 - INFO - GET /health from testclient
+2025-09-25 18:47:36,278 - INFO - GET /employee/1 from testclient
+2025-09-25 18:47:36,279 - INFO - Employee fetched: 1
+2025-09-25 18:47:36,281 - INFO - GET /dashboard from testclient
+2025-09-25 18:47:36,283 - INFO - Dashboard analytics generated
+2025-09-25 18:47:36,284 - INFO - GET /all-employees from testclient
+2025-09-25 18:47:36,287 - INFO - GET /hiring-trends from testclient
+2025-09-25 18:47:36,287 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 18:47:36,291 - INFO - POST /register from testclient
+2025-09-25 18:47:36,524 - INFO - New user registered: testuser
+2025-09-25 18:47:36,525 - INFO - GET /login from testclient
+2025-09-25 18:47:36,531 - INFO - POST /login from testclient
+2025-09-25 18:47:36,531 - INFO - Login attempt for user: testuser
+2025-09-25 18:47:36,764 - INFO - Successful login for user: testuser
+2025-09-25 18:47:36,765 - INFO - GET / from testclient
+2025-09-25 18:47:36,766 - INFO - Portal accessed by: testuser
+2025-09-25 18:47:36,770 - INFO - POST /employee from testclient
+2025-09-25 18:47:36,790 - INFO - POST /employee from testclient
+2025-09-25 18:47:36,794 - INFO - GET /logout from testclient
+2025-09-25 18:47:36,797 - INFO - GET /metrics from testclient
+2025-09-25 18:47:36,801 - INFO - GET /employee/999 from testclient
+2025-09-25 18:47:36,802 - INFO - Employee fetched: 999
+2025-09-25 18:47:36,941 - INFO - GET /dashboard-ui from testclient
+2025-09-25 18:50:12,170 - INFO - GET /health from testclient
+2025-09-25 18:50:12,173 - INFO - GET /employee/1 from testclient
+2025-09-25 18:50:12,173 - INFO - Employee fetched: 1
+2025-09-25 18:50:12,175 - INFO - GET /dashboard from testclient
+2025-09-25 18:50:12,176 - INFO - Dashboard analytics generated
+2025-09-25 18:50:12,178 - INFO - GET /all-employees from testclient
+2025-09-25 18:50:12,181 - INFO - GET /hiring-trends from testclient
+2025-09-25 18:50:12,181 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 18:50:12,185 - INFO - POST /register from testclient
+2025-09-25 18:50:12,419 - INFO - New user registered: testuser
+2025-09-25 18:50:12,420 - INFO - GET /login from testclient
+2025-09-25 18:50:12,426 - INFO - POST /login from testclient
+2025-09-25 18:50:12,427 - INFO - Login attempt for user: testuser
+2025-09-25 18:50:12,662 - INFO - Successful login for user: testuser
+2025-09-25 18:50:12,664 - INFO - GET / from testclient
+2025-09-25 18:50:12,664 - INFO - Portal accessed by: testuser
+2025-09-25 18:50:12,668 - INFO - POST /employee from testclient
+2025-09-25 18:50:12,688 - INFO - POST /employee from testclient
+2025-09-25 18:50:12,692 - INFO - GET /logout from testclient
+2025-09-25 18:50:12,695 - INFO - GET /metrics from testclient
+2025-09-25 18:50:12,698 - INFO - GET /employee/999 from testclient
+2025-09-25 18:50:12,699 - INFO - Employee fetched: 999
+2025-09-25 18:50:12,839 - INFO - GET /dashboard-ui from testclient
+2025-09-25 19:59:23,491 - INFO - GET /health from testclient
+2025-09-25 19:59:23,493 - INFO - GET /employee/1 from testclient
+2025-09-25 19:59:23,494 - INFO - Employee fetched: 1
+2025-09-25 19:59:23,496 - INFO - GET /dashboard from testclient
+2025-09-25 19:59:23,497 - INFO - Dashboard analytics generated
+2025-09-25 19:59:23,499 - INFO - GET /all-employees from testclient
+2025-09-25 19:59:23,501 - INFO - GET /hiring-trends from testclient
+2025-09-25 19:59:23,501 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 19:59:23,505 - INFO - POST /register from testclient
+2025-09-25 19:59:23,742 - INFO - New user registered: testuser
+2025-09-25 19:59:23,743 - INFO - GET /login from testclient
+2025-09-25 19:59:23,749 - INFO - POST /login from testclient
+2025-09-25 19:59:23,749 - INFO - Login attempt for user: testuser
+2025-09-25 19:59:23,984 - INFO - Successful login for user: testuser
+2025-09-25 19:59:23,985 - INFO - GET / from testclient
+2025-09-25 19:59:23,985 - INFO - Portal accessed by: testuser
+2025-09-25 19:59:23,989 - INFO - POST /employee from testclient
+2025-09-25 19:59:24,009 - INFO - POST /employee from testclient
+2025-09-25 19:59:24,013 - INFO - GET /logout from testclient
+2025-09-25 19:59:24,016 - INFO - GET /metrics from testclient
+2025-09-25 19:59:24,019 - INFO - GET /employee/999 from testclient
+2025-09-25 19:59:24,019 - INFO - Employee fetched: 999
+2025-09-25 19:59:24,159 - INFO - GET /dashboard-ui from testclient
+2025-09-25 20:02:39,868 - INFO - GET /health from testclient
+2025-09-25 20:02:39,871 - INFO - GET /employee/1 from testclient
+2025-09-25 20:02:39,872 - INFO - Employee fetched: 1
+2025-09-25 20:02:39,874 - INFO - GET /dashboard from testclient
+2025-09-25 20:02:39,875 - INFO - Dashboard analytics generated
+2025-09-25 20:02:39,876 - INFO - GET /all-employees from testclient
+2025-09-25 20:02:39,879 - INFO - GET /hiring-trends from testclient
+2025-09-25 20:02:39,879 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 20:02:39,883 - INFO - POST /register from testclient
+2025-09-25 20:02:40,117 - INFO - New user registered: testuser
+2025-09-25 20:02:40,118 - INFO - GET /login from testclient
+2025-09-25 20:02:40,123 - INFO - POST /login from testclient
+2025-09-25 20:02:40,124 - INFO - Login attempt for user: testuser
+2025-09-25 20:02:40,359 - INFO - Successful login for user: testuser
+2025-09-25 20:02:40,360 - INFO - GET / from testclient
+2025-09-25 20:02:40,360 - INFO - Portal accessed by: testuser
+2025-09-25 20:02:40,364 - INFO - POST /employee from testclient
+2025-09-25 20:02:40,383 - INFO - POST /employee from testclient
+2025-09-25 20:02:40,387 - INFO - GET /logout from testclient
+2025-09-25 20:02:40,391 - INFO - GET /metrics from testclient
+2025-09-25 20:02:40,393 - INFO - GET /employee/999 from testclient
+2025-09-25 20:02:40,394 - INFO - Employee fetched: 999
+2025-09-25 20:02:40,532 - INFO - GET /dashboard-ui from testclient
+2025-09-25 20:10:37,578 - INFO - GET /health from testclient
+2025-09-25 20:10:37,580 - INFO - GET /employee/1 from testclient
+2025-09-25 20:10:37,581 - INFO - Employee fetched: 1
+2025-09-25 20:10:37,583 - INFO - GET /dashboard from testclient
+2025-09-25 20:10:37,584 - INFO - Dashboard analytics generated
+2025-09-25 20:10:37,586 - INFO - GET /all-employees from testclient
+2025-09-25 20:10:37,589 - INFO - GET /hiring-trends from testclient
+2025-09-25 20:10:37,589 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 20:10:37,593 - INFO - POST /register from testclient
+2025-09-25 20:10:37,829 - INFO - New user registered: testuser
+2025-09-25 20:10:37,830 - INFO - GET /login from testclient
+2025-09-25 20:10:37,836 - INFO - POST /login from testclient
+2025-09-25 20:10:37,837 - INFO - Login attempt for user: testuser
+2025-09-25 20:10:38,071 - INFO - Successful login for user: testuser
+2025-09-25 20:10:38,072 - INFO - GET / from testclient
+2025-09-25 20:10:38,072 - INFO - Portal accessed by: testuser
+2025-09-25 20:10:38,077 - INFO - POST /employee from testclient
+2025-09-25 20:10:38,097 - INFO - POST /employee from testclient
+2025-09-25 20:10:38,101 - INFO - GET /logout from testclient
+2025-09-25 20:10:38,105 - INFO - GET /metrics from testclient
+2025-09-25 20:10:38,108 - INFO - GET /employee/999 from testclient
+2025-09-25 20:10:38,109 - INFO - Employee fetched: 999
+2025-09-25 20:10:38,251 - INFO - GET /dashboard-ui from testclient
+2025-09-25 21:01:52,986 - INFO - GET /health from testclient
+2025-09-25 21:01:52,989 - INFO - GET /employee/1 from testclient
+2025-09-25 21:01:52,989 - INFO - Employee fetched: 1
+2025-09-25 21:01:52,991 - INFO - GET /dashboard from testclient
+2025-09-25 21:01:52,992 - INFO - Dashboard analytics generated
+2025-09-25 21:01:52,994 - INFO - GET /all-employees from testclient
+2025-09-25 21:01:52,997 - INFO - GET /hiring-trends from testclient
+2025-09-25 21:01:52,997 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 21:01:53,002 - INFO - POST /register from testclient
+2025-09-25 21:01:53,239 - INFO - New user registered: testuser
+2025-09-25 21:01:53,240 - INFO - GET /login from testclient
+2025-09-25 21:01:53,245 - INFO - POST /login from testclient
+2025-09-25 21:01:53,246 - INFO - Login attempt for user: testuser
+2025-09-25 21:01:53,479 - INFO - Successful login for user: testuser
+2025-09-25 21:01:53,481 - INFO - GET / from testclient
+2025-09-25 21:01:53,481 - INFO - Portal accessed by: testuser
+2025-09-25 21:01:53,486 - INFO - POST /employee from testclient
+2025-09-25 21:01:53,505 - INFO - GET /logout from testclient
+2025-09-25 21:01:53,508 - INFO - GET /metrics from testclient
+2025-09-25 21:01:53,511 - INFO - GET /employee/999 from testclient
+2025-09-25 21:01:53,512 - INFO - Employee fetched: 999
+2025-09-25 21:01:53,651 - INFO - GET /dashboard-ui from testclient
+2025-09-25 21:02:32,413 - INFO - GET /health from testclient
+2025-09-25 21:02:32,417 - INFO - GET /employee/1 from testclient
+2025-09-25 21:02:32,417 - INFO - Employee fetched: 1
+2025-09-25 21:02:32,419 - INFO - GET /dashboard from testclient
+2025-09-25 21:02:32,421 - INFO - Dashboard analytics generated
+2025-09-25 21:02:32,423 - INFO - GET /all-employees from testclient
+2025-09-25 21:02:32,426 - INFO - GET /hiring-trends from testclient
+2025-09-25 21:02:32,426 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 21:02:32,428 - INFO - POST /register from testclient
+2025-09-25 21:02:32,661 - INFO - New user registered: testuser
+2025-09-25 21:02:32,663 - INFO - GET /login from testclient
+2025-09-25 21:02:32,667 - INFO - POST /login from testclient
+2025-09-25 21:02:32,667 - INFO - Login attempt for user: testuser
+2025-09-25 21:02:32,900 - INFO - Successful login for user: testuser
+2025-09-25 21:02:32,903 - INFO - GET / from testclient
+2025-09-25 21:02:32,903 - INFO - Portal accessed by: testuser
+2025-09-25 21:02:32,907 - INFO - GET /metrics from testclient
+2025-09-25 21:02:32,909 - INFO - GET /employee/999 from testclient
+2025-09-25 21:02:32,909 - INFO - Employee fetched: 999
+2025-09-25 21:02:32,927 - INFO - GET /dashboard-ui from testclient
+2025-09-25 21:03:01,945 - INFO - GET /health from testclient
+2025-09-25 21:03:01,948 - INFO - GET /employee/1 from testclient
+2025-09-25 21:03:01,948 - INFO - Employee fetched: 1
+2025-09-25 21:03:01,950 - INFO - GET /dashboard from testclient
+2025-09-25 21:03:01,951 - INFO - Dashboard analytics generated
+2025-09-25 21:03:01,953 - INFO - GET /all-employees from testclient
+2025-09-25 21:03:01,956 - INFO - GET /hiring-trends from testclient
+2025-09-25 21:03:01,956 - INFO - Hiring trends generated: {'months': ['2022-01'], 'hires': [1]}
+2025-09-25 21:03:01,958 - INFO - POST /register from testclient
+2025-09-25 21:03:02,191 - INFO - New user registered: testuser
+2025-09-25 21:03:02,192 - INFO - GET /login from testclient
+2025-09-25 21:03:02,196 - INFO - POST /login from testclient
+2025-09-25 21:03:02,196 - INFO - Login attempt for user: testuser
+2025-09-25 21:03:02,429 - INFO - Successful login for user: testuser
+2025-09-25 21:03:02,431 - INFO - GET / from testclient
+2025-09-25 21:03:02,431 - INFO - Portal accessed by: testuser

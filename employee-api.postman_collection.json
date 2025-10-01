@@ -1,0 +1,127 @@
+{
+  "info": {
+    "name": "Employee Info API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "username", "value": "testuser", "type": "text" },
+            { "key": "password", "value": "test123", "type": "text" }
+          ]
+        },
+        "url": { "raw": "http://localhost:8000/register", "host": ["localhost"], "port": "8000", "path": ["register"] }
+      }
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "username", "value": "testuser", "type": "text" },
+            { "key": "password", "value": "test123", "type": "text" }
+          ]
+        },
+        "url": { "raw": "http://localhost:8000/login", "host": ["localhost"], "port": "8000", "path": ["login"] }
+      }
+    },
+    {
+      "name": "Create Employee",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"1234\",\n  \"name\": \"Alice\",\n  \"role\": \"Engineer\",\n  \"date_of_birth\": \"1990-01-01\",\n  \"date_of_hiring\": \"2023-01-01\",\n  \"address\": \"123 Main Street\"\n}"
+        },
+        "url": { "raw": "http://localhost:8000/employee", "host": ["localhost"], "port": "8000", "path": ["employee"] }
+      }
+    },
+    {
+      "name": "Get Employee by ID",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/employee/1234", "host": ["localhost"], "port": "8000", "path": ["employee", "1234"] }
+      }
+    },
+    {
+      "name": "Update Employee",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": \"1234\",\n  \"name\": \"Alice Updated\",\n  \"role\": \"Senior Engineer\",\n  \"date_of_birth\": \"1990-01-01\",\n  \"date_of_hiring\": \"2023-01-01\",\n  \"address\": \"456 Updated Street\"\n}"
+        },
+        "url": { "raw": "http://localhost:8000/employee/1234", "host": ["localhost"], "port": "8000", "path": ["employee", "1234"] }
+      }
+    },
+    {
+      "name": "Delete Employee",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:8000/employee/1234", "host": ["localhost"], "port": "8000", "path": ["employee", "1234"] }
+      }
+    },
+    {
+      "name": "List Employees",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/employees?skip=0&limit=10",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["employees"],
+          "query": [
+            { "key": "skip", "value": "0" },
+            { "key": "limit", "value": "10" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Dashboard Analytics",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/dashboard", "host": ["localhost"], "port": "8000", "path": ["dashboard"] }
+      }
+    },
+    {
+      "name": "Hiring Trends",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/hiring-trends", "host": ["localhost"], "port": "8000", "path": ["hiring-trends"] }
+      }
+    },
+    {
+      "name": "Export Employees CSV",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/all-employees", "host": ["localhost"], "port": "8000", "path": ["all-employees"] }
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/health", "host": ["localhost"], "port": "8000", "path": ["health"] }
+      }
+    },
+    {
+      "name": "Prometheus Metrics",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8000/metrics", "host": ["localhost"], "port": "8000", "path": ["metrics"] }
+      }
+    }
+  ]
+}
